@@ -1,7 +1,3 @@
-To create a professional README for your CRUDS System JS project, we need to include several key sections: Project Title, Description, Features, Installation, Usage, Contributing, and License. Based on the files you provided, here is a draft for your README:
-
----
-
 # CRUDS System JS Project
 
 ## Description
