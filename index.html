@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style/style.css">
+  <!-- Font Awesom -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>CRUDS System</title>
+</head>
+
+<body>
+  <header class="container">
+    <h1>cruds</h1>
+    <h3>product management system</h3>
+    <div class="themes">
+      <button class="themeBtn" id="night" onclick="setTheme(this.id)"><i class="fa-regular fa-moon"></i></button>
+      <button class="themeBtn" id="light" onclick="setTheme(this.id)"><i class="fa-regular fa-sun"></i></button>
+    </div>
+  </header>
+
+  <section class=" container inputSec">
+    <label for=""></label>
+    <input placeholder="Title" type="text" id="title">
+
+    <div class="priceBox">
+      <input onkeyup="countTotal()" placeholder="Price" type="number" id="price">
+      <input onkeyup="countTotal()" placeholder="Taxes" type="number" id="taxes">
+      <input onkeyup="countTotal()" placeholder="Ads" type="number" id="ads">
+      <input onkeyup="countTotal()" placeholder="Discount" type="number" id="discount">
+      <span id="total"></span>
+    </div>
+
+    <input placeholder="Count" type="text" id="count">
+    <input placeholder="Category" type="text" id="category">
+    <button onclick="createData()" class="repeatedBtn" id="submitBtn">Create</button>
+  </section>
+  <span class="horzLine"></span>
+  <section class=" container outputSec">
+    <input onkeyup="searching(this.value)" placeholder="Search By Title" type="text" id="searchField">
+    <div class="searchBtns">
+      <button onclick="showSearchStat(this.id)" id="titleBtn" class="searchBtn repeatedBtn">Search By Title</button>
+      <button onclick="showSearchStat(this.id)" id="categoryBtn" class="searchBtn repeatedBtn">Search By
+        Category</button>
+    </div>
+
+    <button onclick="deleteAll()" id="deleteBtn" class="repeatedBtn"></button>
+    <table class="dataTable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Price</th>
+          <th>Taxes</th>
+          <th>Ads</th>
+          <th>Discount</th>
+          <th>Total</th>
+          <th>Category</th>
+          <th>Count</th>
+          <th>Edit</th>
+          <th>Remove</th>
+        </tr>
+      </thead>
+      <tbody id="tbody">
+      </tbody>
+
+    </table>
+
+  </section>
+
+</body>
+<script src="script/script.js"></script>
+
+</html>
