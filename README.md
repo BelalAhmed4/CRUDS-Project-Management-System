@@ -16,7 +16,7 @@ The CRUDS System JS Project is a web-based product management system that allows
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/cruds-system-js.git
+    git clone https://github.com/BelalAhmed4/cruds-system-js.git
     ```
 2. Navigate to the project directory:
     ```bash
